@@ -69,7 +69,7 @@ Goal: Wen anything fails, the message names the function, the error type, the lo
 |JSON from the model | Pass '{"recipes": [}' to the parsing code | Original Error Caught: {'success': False, 'meal_plan': None, 'error': 'JSON parsing error: Expecting value: line 1 column 14 (char 13)'}" | Function: parse_json_to_dict, Error Type: JSONDecodeError, Location: Line 1, Col 14 , Suggestion: LLM returned malformed JSON.' |
 | Meal-plan schema | Feed a plan with 6 recipes or 4 ingredients |  Original Pydantic Validation Error Caught: 2 validation errors for MealPlan recipes, Value error, Meal plan must have exactly 7 recipes, got 0 - shopping_list Field required | Function: validate_and_build_meal_plan - Error Type: ValidationError - Location: Schema Constraints - Suggestion: LLM violated the required structure |
 | Email | Use a wrong app password | Nothing | Failed to send email: Connection unexpectedly closed |
-| Empty textbox | Leave Themes empty, then try None | Test Empty String ('') -> Result: 'random diverse cuisines,(Passed if default used). - Test None -> Result: 'random diverse cuisines' (Passed if default used) |
+| Empty textbox | Leave Themes empty, then try None | Test Empty String ('') -> Result: 'random diverse cuisines,(Passed if default used). - Test None -> Result: 'random diverse cuisines' (Passed if default used) | |
 
 ### Test the refactored code
 Goal: valid input behaves exactly like your Step 1 baseline, and every broken input from Step 5 now gives a clear message.
