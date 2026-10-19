@@ -129,4 +129,3 @@ After the core refactor is working, good next steps are:
 - add a dependency file such as `requirements.txt` or `pyproject.toml`;
 - add a small redacted example output so reviewers can understand the expected result without credentials.
 
-See [`instructions.md`](instructions.md) for the complete lab brief and submission requirements.
